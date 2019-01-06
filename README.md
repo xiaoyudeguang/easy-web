@@ -9,20 +9,20 @@
 ## 使用说明
 
 ## Maven引用(如果版本有变化，请自行去maven中央仓库引用)
-<dependency>
+```
+ <dependency>
     <groupId>io.github.xiaoyudeguang</groupId>
     <artifactId>easy-web</artifactId>
     <version>3.0.6</version>
-</dependency>
-<dependency>
+ </dependency>
+ <dependency>
     <groupId>io.github.xiaoyudeguang</groupId>
     <artifactId>easy-swagger</artifactId>
     <version>3.0.6</version>
-</dependency>
+ </dependency>
+```
 
 ## 引入jdbc驱动包和配置数据源
-```
-当然，作为一个web程序，你还需要在项目中引入jdbc驱动包，。我的是这样的：
 
 #### 引入jdbc驱动包和数据库连接池
 ```
@@ -38,12 +38,15 @@
 ```
 #### 配置数据源（在application.properties文件中配置）
 
+```
 #datasource config
 spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.datasource.url=jdbc:mysql://数据库ip地址:3306/数据库名?useUnicode=true&characterEncoding=utf8&useSSL=false
 spring.datasource.username=账号
 spring.datasource.password=密码
+```
+
 
 ## 使用示例
 ```
@@ -97,6 +100,8 @@ public class PersonController extends AbstractController<PersonService, Person> 
 
 #### Service接口
 
+```
+
 package com.zlyx.easytest.test.service;
 
 import com.zlyx.easytest.test.entity.Person;
@@ -108,8 +113,6 @@ import com.zlyx.easyweb.web.service.AbstractService;
  * @author easy-web 1316851612@qq.com
  * @Date 2019-01-06
  */
-
-```
 public interface PersonService extends AbstractService<PersonMapper,Person> {
 
 }
@@ -163,6 +166,7 @@ public interface PersonMapper extends AbstractMapper<Person> {
 
 #### Entity类
 
+```
 package com.zlyx.easytest.test.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -193,6 +197,8 @@ public class Person implements Serializable {
     
     ...其他属性略...
 }
+```
+
 
 
 
