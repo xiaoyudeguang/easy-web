@@ -8,7 +8,7 @@
 
 ## 使用说明
 
-## Maven引用(如果版本有变化，请自行去maven中央仓库引用)
+#### Maven引用(如果版本有变化，请自行去maven中央仓库引用)
 ```
  <dependency>
     <groupId>io.github.xiaoyudeguang</groupId>
@@ -22,9 +22,9 @@
  </dependency>
 ```
 
-## 引入jdbc驱动包和配置数据源
+#### 引入jdbc驱动包和配置数据源
 
-#### 引入jdbc驱动包和数据库连接池
+###### 引入jdbc驱动包和数据库连接池
 ```
 <dependency>
     <groupId>com.alibaba</groupId>
@@ -36,7 +36,7 @@
     <artifactId>mysql-connector-java</artifactId>
 </dependency> 
 ```
-#### 配置数据源（在application.properties文件中配置）
+###### 配置数据源（在application.properties文件中配置）
 
 ```
 #datasource config
@@ -47,8 +47,7 @@ spring.datasource.username=账号
 spring.datasource.password=密码
 ```
 
-
-## 使用示例
+#### 使用示例
 ```
 @EasyGenerater(isGenerate = true, todo = { "easy-web代码生成器示例" }, value = "")
 public class EasyGenerator extends AbstractGenerator{
