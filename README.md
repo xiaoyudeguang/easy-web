@@ -50,7 +50,7 @@ spring.datasource.password=密码
 #### 使用示例
 ```
 @EasyGenerater(isGenerate = true, todo = { "easy-web代码生成器示例" }, value = "")
-public class EasyGenerator extends AbstractGenerator{
+public class EasyGenerate extends AbstractGenerator{
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
